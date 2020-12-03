@@ -1,25 +1,41 @@
-import logo from './logo.svg';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import React, { Component } from 'react';
+import {Switch, Route} from 'react-router-dom';
+import RestaurantList from './components/RestaurantList';
+import RestaurantDetails from './components/RestaurantDetails';
+import HeaderBar from './components/headerBar/HeaderBar'
+import {restautantsList} from './data/restaurants'
+import { connect } from 'react-redux';
 
-export default App;
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
+  componentDidMount() {
+    this.props.updateRestaurantList(restautantsList)
+  }
+
+  render() {
+    return (
+    <React.Fragment>
+      <HeaderBar />
+      <Switch>
+        <Route exact path="/" component={RestaurantList} />
+        <Route path="/restaurantName" component={RestaurantDetails}/>
+      </Switch>
+    </React.Fragment>
+    );
+  }
+ }
+
+ const mapDispatchToProps = dispatch => {
+   return {
+     updateRestaurantList : (val) => dispatch({type: 'ADD_RESTAURANTS', payload: val})
+   }
+ }
+
+
+export default connect(null, mapDispatchToProps)(App);

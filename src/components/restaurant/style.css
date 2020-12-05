@@ -1,0 +1,17 @@
+.restaurantRowItem{
+  display: flex;
+  flex-direction: row;
+  padding: 2px;
+  border-radius: 2px;
+  margin: 5px 0;
+
+}
+
+.logoContainer{
+background-color: green;
+}
+
+.detailsContainer{
+  background-color: red;
+
+}

@@ -3,9 +3,10 @@ import './App.css';
 
 import React, { Component } from 'react';
 import {Switch, Route} from 'react-router-dom';
-import RestaurantList from './components/RestaurantList';
+import GridContainer from './components/gridcontainer/GridContainer';
 import RestaurantDetails from './components/RestaurantDetails';
 import HeaderBar from './components/headerBar/HeaderBar'
+import Category from './components/FoodCategory/Category'
 import {restautantsList} from './data/restaurants'
 import { connect } from 'react-redux';
 
@@ -19,11 +20,14 @@ class App extends React.Component {
   }
 
   render() {
+    console.log("From app js")
+    console.log(this.props.RestaurantList)
     return (
     <React.Fragment>
       <HeaderBar />
+      <Category />
       <Switch>
-        <Route exact path="/" component={RestaurantList} />
+        <Route exact path="/" component={GridContainer} />
         <Route path="/restaurantName" component={RestaurantDetails}/>
       </Switch>
     </React.Fragment>

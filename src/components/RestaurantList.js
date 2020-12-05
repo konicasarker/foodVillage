@@ -1,22 +1,22 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import Restautant from './restaurant/Restaurant.js'
 
 class RestaurantList extends Component {
 
-    constructor(props) {
-        super(props)
-        this.state = {
-            RestaurantList : []  
-        }
 
-    }
+    //state = {flag : true}
 
     render(){
-        console.log("============= restaurant details ====",this.state.RestaurantList)
+        console.log("============= restaurant List ====",this.props)
         return (
            <div> 
                <h1> This is Restaurant list </h1>
-                <div> </div>
+                <div> 
+                    {this.props.allResturants.map((item, index)=>{
+                         return <Restautant key={index} item={item} />
+                    })}
+                </div>
            </div>
         )  
     }     
@@ -24,7 +24,7 @@ class RestaurantList extends Component {
 }
 
 const mapStateToProps = state => ({
-    RestaurantList: state.RestaurantList ? state.RestaurantList : []
+    allResturants: state.restautantsList ? state.restautantsList : []
 })
 
 export default connect(mapStateToProps)(RestaurantList)

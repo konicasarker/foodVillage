@@ -1,14 +1,27 @@
 import React, {Component} from 'react';
+import FilterCard from './FilterCard'
+import {connect} from 'react-redux';
 import "./style.css"
 
-export default class Filter extends Component {
+class Filters extends Component {
     render(){
-          console.log("============= Filter ====",)
-        return (
-           <div>  
-              <h2> here is filter div </h2>
-           </div>
+       const filterOptions = this.props.filterOptions
+        return(
+           <div>
+               { 
+                  filterOptions.map((item, index)=>{
+                     return <FilterCard key={index} item={item} />
+                  })
+               }
+            </div>     
         )  
     }     
 
 }
+
+
+const mapStateToProps = state => ({
+   filterOptions: state.filterOptions ? state.filterOptions : []
+})
+
+export default connect(mapStateToProps)(Filters)

@@ -12,8 +12,8 @@ export default class Gridcontainer extends Component {
     render(){
         return (
            <div className="grid-container"> 
-               <Filter />
-               <RestaurantList />
+               <div className="grid-filter"> <Filter /> </div>
+               <div className="grid-restaurantList"> <RestaurantList /> </div>
            </div>
         )  
     }     

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import "./style.css"
-import titleImage from '../../titleImage.jpg'
+import titleImage from '../../header2.jpeg'
 import logo2 from '../../logo-tr.png'
 
 
@@ -22,7 +22,7 @@ export default class HeaderBar extends Component {
                 <div className="topbar-menu">  ---  </div> 
                 </div>
                 <div className="header-image-container">
-                    <img className="header-image" src={titleImage} alt="logo"/>
+                    <img src={titleImage} alt="Nature" class="responsive"></img>
                 </div>
           </div>
         )

@@ -1,0 +1,31 @@
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+}
+
+.container-headline {
+  font-size: 16px;
+  padding-left: 25px;
+  font-weight: 600;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #0a3847;
+  }
+
+
+
+  
+

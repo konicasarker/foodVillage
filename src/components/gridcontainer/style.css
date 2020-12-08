@@ -1,5 +1,16 @@
 .grid-container{
+    border: 2px solid black;
     display: flex;
     flex-direction: row;
     padding: 15px;
+}
+
+.grid-filter {
+    border: 2px solid green;
+    width: 35%;
+}
+
+.grid-restaurantList {
+    border: 2px solid green;
+    width: 65%;
 }

@@ -10,7 +10,8 @@ import { Provider } from 'react-redux'
 import reducer from './reducer/reducer'
 
 const initState = {
-  restautantsList: []
+  restautantsList: [],
+  filterOptions: []
 }
 
 const store = createStore(reducer, initState)

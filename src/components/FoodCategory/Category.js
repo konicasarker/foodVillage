@@ -5,7 +5,7 @@ export default class Category extends Component {
     render(){
           console.log("============= Filter ====",)
         return (
-            <div>
+            <div className="category">
                 <span style={{ marginRight: "20px" }}>All</span>
                 <span style={{ marginRight: "20px" }}>Italian style Pizza</span>
                 <span style={{marginRight: "20px" }}>Sushi</span>

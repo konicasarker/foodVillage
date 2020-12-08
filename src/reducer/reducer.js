@@ -3,6 +3,9 @@ export default function reducer (state={}, action){
         case 'ADD_RESTAURANTS' : {
             return {...state, restautantsList: action.payload}
         }
+        case 'ADD_FILTERS' : {
+            return {...state, filterOptions: action.payload}
+        }
         default: {
             return state
         }

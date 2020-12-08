@@ -2,7 +2,7 @@ export const restautantsList  = [
     {
       id: 1,
       name: "Ristorante Tia Maria",
-      logo: "img/burgerKing",
+      logo: "img/burgerKing.png",
       reviews: 10,
       category: ["Italian Style pizza", "Steaks", "Pasta"],
       deliveryCharge: false,
@@ -32,7 +32,7 @@ export const restautantsList  = [
     {
         id: 4,
         name: "Vadoli Pizza Berlin Mitte",
-        logo: "img/carla.png",
+        logo: "../img/carla.png",
         reviews: 10,
         category: ["Italian Style pizza", "Steaks", "Pasta"],
         deliveryCharge: false,
@@ -42,7 +42,7 @@ export const restautantsList  = [
     {
         id: 5,
         name: "dean & david",
-        logo: "img/arby",
+        logo: "img/arby.png",
         reviews: 10,
         category: ["Italian Style pizza", "Steaks", "Pasta"],
         deliveryCharge: false,

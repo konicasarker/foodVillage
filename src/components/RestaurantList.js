@@ -4,11 +4,7 @@ import Restautant from './restaurant/Restaurant.js'
 
 class RestaurantList extends Component {
 
-
-    //state = {flag : true}
-
     render(){
-        console.log("============= restaurant List ====",this.props)
         return (
            <div> 
                <h1> This is Restaurant list </h1>

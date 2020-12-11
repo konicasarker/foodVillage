@@ -5,9 +5,9 @@ export const restautantsList  = [
       logo: "img/burgerKing.png",
       reviews: 10,
       category: ["Italian Style pizza", "Steaks", "Pasta"],
-      deliveryCharge: false,
+      deliveryCharge: 0,
       deliveryTime: 60,
-      minOrder: 30
+      minOrder: 5
     },
     {
         id: 2,
@@ -15,9 +15,9 @@ export const restautantsList  = [
         logo: "img/wendy.png",
         reviews: 10,
         category: ["Italian Style pizza", "Steaks", "Pasta"],
-        deliveryCharge: false,
+        deliveryCharge: 3,
         deliveryTime: 30,
-        minOrder: 25
+        minOrder: 20
     },
     {
         id: 3,
@@ -25,9 +25,9 @@ export const restautantsList  = [
         logo: "img/mcdonalds.png",
         reviews: 10,
         category: ["Italian Style pizza", "Steaks", "Pasta"],
-        deliveryCharge: false,
+        deliveryCharge: 2,
         deliveryTime: 45,
-        minAmount: 35
+        minOrder: 10
     },
     {
         id: 4,
@@ -35,9 +35,9 @@ export const restautantsList  = [
         logo: "../img/carla.png",
         reviews: 10,
         category: ["Italian Style pizza", "Steaks", "Pasta"],
-        deliveryCharge: false,
+        deliveryCharge: 5,
         deliveryTime: 45,
-        minAmount: 20
+        minOrder: 10
     },
     {
         id: 5,
@@ -45,8 +45,8 @@ export const restautantsList  = [
         logo: "img/arby.png",
         reviews: 10,
         category: ["Italian Style pizza", "Steaks", "Pasta"],
-        deliveryCharge: false,
+        deliveryCharge: 0,
         deliveryTime: 30,
-        minAmount: 25
+        minOrder: 15
     }
   ];

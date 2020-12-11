@@ -2,33 +2,48 @@ import React, {Component} from 'react';
 import "./style.css"
 
 export default class FilterCard extends Component {
-    render(){
-       const {title, options, testarr, name} = this.props.item
-       let checked = false;
-       
-       //const testarr = ["aa", "bb", "cc"]
-         //console.log("============= Filter OPTIONS XXX ====",this.props.item)
-        return (
-           <div className="filter-container">  
-            <p class="container-headline"> {title}</p>
-              { 
-                  (testarr.map((item, index)=>{
-                     if(item.selected==true){
-                        checked = "checked";
-                     }else{
-                        checked=""
-                     }
-                    
-                      return (
-                         <>
-                            <div class="container"><input type="radio" name={name} value="bread" checked={checked}/> {item.option} </div>                       
-                        </> 
-                      )
-                   }))
-               }
-           </div>
-        )  
-    }     
+   state = {
+      showComponent: false
+    };
 
+    handleChange = (evt) => {
+      this.props.getFilter(evt.target.name, evt.target.value)
+   }
+
+    render(){
+      let {title, options, name} = this.props.item
+      let checkedVal = false;
+       
+         return (
+            <div className="filter-container">  
+             <p className="container-headline"> {title}</p>
+               { 
+                   (options.map((item, index)=>{
+                      if(item.selected==="true"){  
+                        checkedVal = true;
+                      }else{
+                        checkedVal = false;
+                      }
+                    
+                       return (
+                          <>
+                             <div className="container">
+                                <input 
+                                    type="radio" 
+                                    name={name}
+                                    value={item.option} 
+                                    checked={checkedVal}
+                                    onChange={this.handleChange}
+                                 /> {item.option}   
+                              </div>                       
+                         </> 
+                       )
+                    }))
+                }
+            </div>
+
+         )  
+   
+    }
 }
 

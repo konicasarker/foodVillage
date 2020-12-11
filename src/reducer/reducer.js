@@ -6,6 +6,9 @@ export default function reducer (state={}, action){
         case 'ADD_FILTERS' : {
             return {...state, filterOptions: action.payload}
         }
+        case 'UPDATE_LIST' : {
+            return {...state, restautantsList: action.payload}
+        }
         default: {
             return state
         }

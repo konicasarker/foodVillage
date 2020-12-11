@@ -48,15 +48,6 @@ export default function Restaurant(props) {
         const { id, name, logo, reviews, category, deliveryCharge, deliveryTime, minOrder } = props.item;
         //console.log("============= restaurant ====", logo)
         return (
-        //    <div className='restaurantRowItem'> 
-        //         <div className='logoContainer'>  
-        //             <img className="restaurant-logo" src={logo} alt="logo"/>
-        //         </div>
-        //         <div className='detailsContainer'> Details  </div>
-        //    </div>
-
-
-
           <Card className={classes.root}>
                <div className="logowrapper">
                    <div className="logo-n"> 
@@ -75,14 +66,14 @@ export default function Restaurant(props) {
                   <Typography variant="display2" color="textSecondary">
                     <div>
                       {category.map(function(item) {
-                        return <div className="item">{item}</div>;
+                        return <div key={item.id} className="item">{item}</div>;
                       })}
                     </div>
                   </Typography>
                 </CardContent>
 
                 <div className={classes.controls}>
-                  <IconButton aria-label="previous">
+                  {/* <IconButton aria-label="previous">
                     {theme.direction === 'rtl' ? <SkipNextIcon /> : <SkipPreviousIcon />}
                   </IconButton>
                   <IconButton aria-label="play/pause">
@@ -90,7 +81,7 @@ export default function Restaurant(props) {
                   </IconButton>
                   <IconButton aria-label="next">
                     {theme.direction === 'rtl' ? <SkipPreviousIcon /> : <SkipNextIcon />}
-                  </IconButton>
+                  </IconButton> */}
                 </div>
               </div>
 

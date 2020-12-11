@@ -22,7 +22,7 @@ export default class HeaderBar extends Component {
                 <div className="topbar-menu">  ---  </div> 
                 </div>
                 <div className="header-image-container">
-                    <img src={titleImage} alt="Nature" class="responsive"></img>
+                    <img src={titleImage} alt="Nature" className="responsive"></img>
                 </div>
           </div>
         )

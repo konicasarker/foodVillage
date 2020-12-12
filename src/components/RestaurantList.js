@@ -1,18 +1,21 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import Restautant from './restaurant/Restaurant.js'
+import Restautant from './restaurant/RestaurantV2.js'
+import {Link} from 'react-router-dom';
+import "./style.css"
 
 class RestaurantList extends Component {
 
     render(){
         return (
            <div> 
-               <h1> This is Restaurant list </h1>
-                <div> 
-                    {this.props.allResturants.map((item, index)=>{
-                         return <Restautant key={index} item={item} />
-                    })}
-                </div>
+               <Link className="nav-link" to="/restaurantDetails">
+                    <div> 
+                        {this.props.allResturants.map((item, index)=>{
+                            return  <Restautant key={index} item={item} />
+                        })}
+                    </div>
+                </Link>
            </div>
         )  
     }     

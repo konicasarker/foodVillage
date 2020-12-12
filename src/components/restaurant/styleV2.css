@@ -1,0 +1,152 @@
+.restaurantRowItem{
+  display: flex;
+  flex-direction: row;
+  padding: 2px;
+  border-radius: 2px;
+  margin: 5px 0;
+
+}
+
+.logoContainer{
+background-color: green;
+}
+
+.detailsContainer{
+  background-color: red;
+
+}
+
+.restaurant {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    padding: 2px;
+    border-radius: 2px;
+    border: 1px solid #ebebeb;
+    cursor: pointer;
+    margin: 8px 0;
+    min-height: 120px;
+    overflow: hidden;
+}
+
+.logoWrapper{
+    flex: 0 0 98px;
+    text-align: center;
+    border-right: 1px solid #ebebeb;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.restaurantName{
+  font-family: Takeaway Sans,Avant Garde,Century Gothic,Helvetica,Arial,sans-serif;
+  font-weight: 600;
+  padding: 0;
+  color: #0a3847;
+  font-size: 18px;
+  line-height: 22px;
+  max-height: 66px;
+  overflow: hidden;
+  margin: 0 8px 0 0;
+}
+
+.restaurant .detailsWrapper .kitchens {
+  line-height: 22px;
+  font-family: Roboto Slab,Arial,serif;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 8px 4px 0;
+  color: #666;
+}
+
+.detailsWrapper{
+  flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  min-height: 120px;
+  line-height: 1.7;
+  font-size: 15px;
+  padding: 8px 0 0 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.deliveryDetailsWrapper {
+  margin-top: auto;
+  font-size: 12px;
+  line-height: 2em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 3px;
+  margin-bottom: 6px;
+}
+
+.delivery {
+  width: 100%;
+  line-height: 18px;
+  font-family: Roboto Slab,Arial,serif;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: #666;
+}
+
+.delivery-time{
+  margin-right: 16px;
+}
+
+.delivery-cost{
+  margin-right: 16px;
+}
+
+.min-order{
+  margin-right: 16px;
+}
+
+.label{
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  text-align: left;
+  z-index: 2;
+}
+
+.logo-n {
+  z-index: 1;
+  max-width: 80px;
+  text-align: left;
+  font-size: 12px;
+  position: absolute;
+  width: 100%;
+  top: 45%;
+  transform: translateY(-50%);
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.review{
+  overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    z-index: 2;
+    padding-bottom: 3px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.restaurant-logo{
+  width: 100%;
+  max-height: 80px;
+  height: auto;
+}

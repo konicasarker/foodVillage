@@ -71,12 +71,26 @@ class Filters extends Component {
         const filterOptions = this.props.filterOptions
         return(
            <div>
-               { 
-                  filterOptions.map((item, index)=>{
-                     return <FilterCard key={index} item={item} getFilter={this.getFilter} filterByDeliveryCharge={this.filterByDeliveryCharge} filterByMinOrder={this.filterByMinOrder}/>
-                  })
-               }
-            </div>     
+             <div>
+                Title
+                <div> Title</div>  
+                <div> Title</div>  
+             </div> 
+             <nav> navigation
+               <div> </div>
+               <div>
+                  <button> Button 1</button> 
+                  <button> Button 1</button> 
+               </div>
+             </nav>     
+            <div>
+                  { 
+                     filterOptions.map((item, index)=>{
+                        return <FilterCard key={index} item={item} getFilter={this.getFilter} filterByDeliveryCharge={this.filterByDeliveryCharge} filterByMinOrder={this.filterByMinOrder}/>
+                     })
+                  }
+               </div>  
+         </div>   
         )  
     }     
 

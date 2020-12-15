@@ -7,7 +7,8 @@ export const restautantsList  = [
       category: ["Italian Style pizza", "Steaks", "Pasta"],
       deliveryCharge: 0,
       deliveryTime: 60,
-      minOrder: 5
+      minOrder: 5,
+      show: true
     },
     {
         id: 2,
@@ -17,7 +18,8 @@ export const restautantsList  = [
         category: ["Italian Style pizza", "Steaks", "Pasta"],
         deliveryCharge: 3,
         deliveryTime: 30,
-        minOrder: 20
+        minOrder: 20,
+        show: true
     },
     {
         id: 3,
@@ -27,7 +29,8 @@ export const restautantsList  = [
         category: ["Italian Style pizza", "Steaks", "Pasta"],
         deliveryCharge: 2,
         deliveryTime: 45,
-        minOrder: 10
+        minOrder: 10,
+        show: true
     },
     {
         id: 4,
@@ -37,7 +40,8 @@ export const restautantsList  = [
         category: ["Italian Style pizza", "Steaks", "Pasta"],
         deliveryCharge: 5,
         deliveryTime: 45,
-        minOrder: 10
+        minOrder: 10,
+        show: true
     },
     {
         id: 5,
@@ -47,6 +51,7 @@ export const restautantsList  = [
         category: ["Italian Style pizza", "Steaks", "Pasta"],
         deliveryCharge: 0,
         deliveryTime: 30,
-        minOrder: 15
+        minOrder: 15,
+        show: true
     }
   ];

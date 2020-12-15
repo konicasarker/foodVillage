@@ -2,16 +2,14 @@ import React, {Component} from 'react';
 import "./style.css"
 
 export default class FilterCard extends Component {
-   state = {
-      showComponent: false
-    };
 
     handleChange = (evt) => {
       this.props.getFilter(evt.target.name, evt.target.value)
    }
 
     render(){
-      let {title, options, name} = this.props.item
+      let {title, options, name} = this.props.filterOptions
+      const { orderValIdentifier, deliveryValIdentifier, filterOptions, updateIdentifier } = this.props
       let checkedVal = false;
        
          return (
@@ -19,7 +17,7 @@ export default class FilterCard extends Component {
              <p className="container-headline"> {title}</p>
                { 
                    (options.map((item, index)=>{
-                      if(item.selected==="true"){  
+                      if((item.id===orderValIdentifier && filterOptions.id == 1) || (item.id===deliveryValIdentifier && filterOptions.id == 2)){  
                         checkedVal = true;
                       }else{
                         checkedVal = false;
@@ -33,7 +31,7 @@ export default class FilterCard extends Component {
                                     name={name}
                                     value={item.option} 
                                     checked={checkedVal}
-                                    onChange={this.handleChange}
+                                    onChange={(evt) => { updateIdentifier(item.id, item.value, filterOptions.id) }}
                                  /> {item.option}   
                               </div>                       
                          </> 

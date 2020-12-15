@@ -9,7 +9,9 @@ class Filters extends Component {
    constructor(props) {
       super(props)
       this.state = {
-         tempRestaurantList : []
+         tempRestaurantList : [],
+         orderValIdentifier: 1,
+         deliveryValIdentifier: 1,
       }
   }
 
@@ -30,15 +32,9 @@ class Filters extends Component {
 
    filterByMinOrder = (filterValue) => {
       console.log(" checking filter value = ", filterValue)
-      let filteredResList = []
-
-      if(filterValue==0) {
-         console.log(rsl)
-         this.props.updateList(rsl)
-      }else{
-         filteredResList = this.props.restautantsList.filter(res => res.minOrder <= filterValue)
-         this.props.updateList(filteredResList)
-      }
+      let filteredResList = filterValue == 0 ? this.props.restautantsList.map(item => ({...item, show: true})) : 
+                     this.props.restautantsList.map(res => res.minOrder <= filterValue ? ({...res, show: true}): ({...res, show: false}))
+      this.props.updateList(filteredResList)
    }
 
   updateFilterCheckedOption = (filter, optionValue) => {
@@ -58,7 +54,7 @@ class Filters extends Component {
      const filter = this.props.filterOptions.find(item => item.name === filterName)
      
      const filterValue = filter.options.find(item => item.option===filterOption)
-     this.updateFilterCheckedOption(filter, filterOption)
+     //this.updateFilterCheckedOption(filter, filterOption)
       if(filter.name==="order_amount"){
          this.filterByMinOrder(filterValue.value)
       }else if(filter.name==="delivery_cost"){
@@ -66,6 +62,16 @@ class Filters extends Component {
       }
    }
 
+
+   updateIdentifier = (identifier, value, id) => {
+      if(id == 1) {
+         this.setState({ orderValIdentifier: identifier })
+         this.filterByMinOrder(value)
+      } else {
+         this.setState({ deliveryValIdentifier: identifier})
+         this.filterByDeliveryCharge(value)
+      }
+   }
 
     render(){
         const filterOptions = this.props.filterOptions
@@ -86,7 +92,14 @@ class Filters extends Component {
             <div>
                   { 
                      filterOptions.map((item, index)=>{
-                        return <FilterCard key={index} item={item} getFilter={this.getFilter} filterByDeliveryCharge={this.filterByDeliveryCharge} filterByMinOrder={this.filterByMinOrder}/>
+                        return <FilterCard key={index} 
+                                       deliveryValIdentifier={this.state.deliveryValIdentifier} 
+                                       orderValIdentifier={this.state.orderValIdentifier} 
+                                       filterOptions={item} 
+                                       getFilter={this.getFilter} 
+                                       updateIdentifier={this.updateIdentifier}
+                                       filterByDeliveryCharge={this.filterByDeliveryCharge} 
+                                       filterByMinOrder={this.filterByMinOrder}/>
                      })
                   }
                </div>  

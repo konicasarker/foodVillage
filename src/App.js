@@ -30,7 +30,7 @@ class App extends React.Component {
       <Category />
       <Switch>
         <Route exact path="/" component={GridContainer} />
-        <Route path="/restaurantName" component={RestaurantDetails}/>
+        <Route path="/:name" component={RestaurantDetails}/>
       </Switch>
     </React.Fragment>
     );

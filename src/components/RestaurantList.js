@@ -10,13 +10,13 @@ class RestaurantList extends Component {
         console.log(this.props.allResturants.filter(item => item.show), 'data')
         return (
            <div> 
-               <Link className="nav-link" to="/restaurantDetails">
                     <div> 
                         {this.props.allResturants.filter(item => item.show).map((item, index)=>{
-                            return  <Restautant key={index} item={item} />
+                            return (<Link className="nav-link" to={`/${item.name}`}>
+                                        <Restautant key={index} item={item} />
+                                    </Link>)
                         })}
                     </div>
-                </Link>
            </div>
         )  
     }     

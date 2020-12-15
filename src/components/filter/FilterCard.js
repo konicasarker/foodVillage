@@ -24,8 +24,7 @@ export default class FilterCard extends Component {
                       }
                     
                        return (
-                          <>
-                             <div className="container">
+                             <div className="container" key={index}>
                                 <input 
                                     type="radio" 
                                     name={name}
@@ -33,8 +32,7 @@ export default class FilterCard extends Component {
                                     checked={checkedVal}
                                     onChange={(evt) => { updateIdentifier(item.id, item.value, filterOptions.id) }}
                                  /> {item.option}   
-                              </div>                       
-                         </> 
+                              </div>
                        )
                     }))
                 }

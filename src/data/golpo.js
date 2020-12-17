@@ -1,4 +1,15 @@
-export const menuItems  = [
+
+
+export const menuHeaders = [{ menu: "Popular dishes", id: 0},
+  { menu: "soup", id: 1},
+  { menu: "Vegetarian dishes", id: 2},
+  { menu: "Meat Items", id: 3},
+  { menu: "Fish items", id: 4},
+  { menu: "Cakes/Bakings", id: 5},
+  { menu: "sweet and snacks", id: 6},
+  { menu: "Drinks", id: 7}]
+
+const menuItems  = [
     {
     dishId : 1,
     dishName: "soup",
@@ -139,3 +150,5 @@ export const menuItems  = [
     },
 
 ]
+
+export default menuItems

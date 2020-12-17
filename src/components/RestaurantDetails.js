@@ -9,6 +9,7 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import dishItems, { menuHeaders } from '../data/golpo'
+import allResturantsDetails from '../data/combineRestraunts'
 
 const DishDetails = (props) => {
     var data = dishItems.filter(item => props.value == 0 ? true :  props.value == item.dishId ).map(item => item.dishName)

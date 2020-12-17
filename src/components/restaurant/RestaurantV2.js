@@ -45,8 +45,7 @@ export default function Restaurant(props) {
         const classes = useStyles();
         const theme = useTheme();
 
-        const { id, name, logo, reviews, category, deliveryCharge, deliveryTime, minOrder } = props.item;
-
+        const { id, name, logo, reviews, category, deliveryCharge, deliveryTime, minOrder } = props.item
         return (
           <>
             <div className="restaurant">
@@ -60,14 +59,12 @@ export default function Restaurant(props) {
                 <div className="kitchens"><span>Italian styles pizza, german, pasta</span></div>
                 <div className="deliveryDetailsWrapper">
                   <div className="delivery">
-                    <div className="delivery-time">45 min</div>
-                    <div className="delivery-cost">Free</div>
-                    <div classname="min-order">Min. 15,00 €</div>
+                    <div className="delivery-time">{deliveryTime} min</div>
+                    <div className="delivery-cost">Delivery charge: {deliveryCharge}€</div>
+                    <div className="min-order">Min Order {minOrder}€ </div>
                   </div>
                 </div>
               </div>
-
-              
             </div>
           
           

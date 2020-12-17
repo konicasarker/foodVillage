@@ -3,7 +3,6 @@ import "./style.css"
 
 export default class Category extends Component {
     render(){
-          console.log("============= Filter ====",)
         return (
             <div className="category">
                 <span style={{ marginRight: "20px" }}>All</span>

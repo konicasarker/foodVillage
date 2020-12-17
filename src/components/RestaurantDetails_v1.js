@@ -9,8 +9,6 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
-const menuItems = ["Popular dishes", "soup", "Vegetarian dishes", "Meat Items", "Fish items", "Cakes/Bakings", "sweet and snacks", "Drinks"];
-
 
 export default class RestaurantDetails extends Component {
 
@@ -51,16 +49,10 @@ export default class RestaurantDetails extends Component {
     }
 
     render(){
-        console.log("GOLPO ITEMS + " , menuItems)
         return (
            <div> 
-               <div>
-                   <div> Restaurant name : {this.props.match.params.name} </div>
-                   <div> Info and Favourite</div>
-                   <div> Review-rating</div>
-                   <div> Restaurant info</div>
-               </div>
-                <AppBar position="static" color="default">
+               <h1> {this.props.match.params.name}</h1>
+               <AppBar position="static" color="default">
                     <Tabs
                     value={0}
                     indicatorColor="primary"
@@ -69,13 +61,7 @@ export default class RestaurantDetails extends Component {
                     scrollButtons="auto"
                     aria-label="scrollable auto tabs example"
                     >
-                        {
-                            menuItems.map((item, index) =>{
-                                return <Tab key={index} label={item} {...a11yProps(index)}/>
-                        })
-                        
-                        }
-                        {/* <Tab label="Item One" {...a11yProps(0)} abcd />
+                        <Tab label="Item One" {...a11yProps(0)} />
                         <Tab label="Item Two" {...a11yProps(1)} />
                         <Tab label="Item Three" {...a11yProps(2)} />
                         <Tab label="Item Four" {...a11yProps(3)} />
@@ -86,12 +72,9 @@ export default class RestaurantDetails extends Component {
                         <Tab label="Item Four" {...a11yProps(3)} />
                         <Tab label="Item Five" {...a11yProps(4)} />
                         <Tab label="Item Six" {...a11yProps(5)} />
-                        <Tab label="Item Seven" {...a11yProps(6)} /> */}
+                        <Tab label="Item Seven" {...a11yProps(6)} />
                     </Tabs>
-                </AppBar>     
-               
-               <div> Menu Card </div>    
-
+                </AppBar>
            </div>
         )  
     }     

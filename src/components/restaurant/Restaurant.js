@@ -46,7 +46,6 @@ export default function Restaurant(props) {
         const theme = useTheme();
 
         const { id, name, logo, reviews, category, deliveryCharge, deliveryTime, minOrder } = props.item;
-        console.log("============= restaurant ====", logo)
         return (
           <Card className={classes.root}>
                <div className="logowrapper">

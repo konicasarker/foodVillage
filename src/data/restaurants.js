@@ -63,7 +63,7 @@ export const restautantsList  = [
         id: 6,
         name: "Golpo Berlin",
         nameIdentifier: "Golpo",
-        logo: "img/golpo.png",
+        logo: "img/golpoType.png",
         reviews: 10,
         category: ["chicken curry", "Bangladeshi/Indian foods", "Vegeterian", "Burger"],
         deliveryCharge: 5,

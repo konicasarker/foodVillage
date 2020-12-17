@@ -16,24 +16,20 @@ class Filters extends Component {
   }
 
   filterByDeliveryCharge = (filterValue) => {
-   console.log(" checking filter value = ", filterValue)
-   let filteredResList = []
+   let filteredResList = filterValue == 0 ? 
+                              this.props.restautantsList.map(item => ({...item, show: true})) : 
+                              this.props.restautantsList.map(res=> res.deliveryCharge <= filterValue ? 
+                                                                     ({...res, show: true}) : 
+                                                                     ({...res, show: false }))
 
-   if(filterValue.option === "No preference" && filterValue.value==0) {
-      console.log(rsl)
-      this.props.updateList(rsl)
-   }else{
-      this.props.updateList(rsl)
-      filteredResList = this.props.restautantsList.filter(res => res.deliveryCharge <= filterValue.value)
-      this.props.updateList(filteredResList)
-   }
+     this.props.updateList(filteredResList)
 }
 
 
    filterByMinOrder = (filterValue) => {
-      console.log(" checking filter value = ", filterValue)
       let filteredResList = filterValue == 0 ? this.props.restautantsList.map(item => ({...item, show: true})) : 
-                     this.props.restautantsList.map(res => res.minOrder <= filterValue ? ({...res, show: true}): ({...res, show: false}))
+                     this.props.restautantsList.map(res => res.minOrder <= filterValue ? ({...res, show: true}) : ({...res, show: false}))
+     
       this.props.updateList(filteredResList)
    }
 

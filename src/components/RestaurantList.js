@@ -7,12 +7,11 @@ import "./style.css"
 class RestaurantList extends Component {
 
     render(){
-        console.log(this.props.allResturants.filter(item => item.show), 'data')
         return (
            <div> 
                     <div> 
                         {this.props.allResturants.filter(item => item.show).map((item, index)=>{
-                            return (<Link className="nav-link" to={`/${item.name}`}>
+                            return (<Link key={index} className="nav-link" to={`/${item.nameIdentifier}`}>
                                         <Restautant key={index} item={item} />
                                     </Link>)
                         })}

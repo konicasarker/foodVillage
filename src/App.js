@@ -22,8 +22,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log("From app js")
-    console.log(this.props.RestaurantList)
     return (
     <React.Fragment>
       <HeaderBar />

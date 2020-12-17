@@ -10,23 +10,24 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import dishItems, { menuHeaders } from '../data/golpo'
 import allResturantsDetails from '../data/combineRestraunts'
+import DishDetails from "./restaurant/Dish/DishDetails"
 
-const DishDetails = (props) => {
-    var data = dishItems.filter(item => props.value == 0 ? true :  props.value == item.dishId ).map(item => item.dishName)
+// const DishDetails2 = (props) => {
+//     var data = dishItems.filter(item => props.value == 0 ? true :  props.value == item.dishId ).map(item => item.dishName)
     
-    return (
-        <div>
-            {dishItems.filter(item => props.value == 0 ? true :  props.value == item.dishId ).map(item => {
-                return (<div>
-                    <h3>{item.dishName}</h3>
-                    <div>
+//     return (
+//         <div>
+//             {dishItems.filter(item => props.value == 0 ? true :  props.value == item.dishId ).map(item => {
+//                 return (<div>
+//                     <h3>{item.dishName}</h3>
+//                     <div>
                         
-                    </div>
-                </div>)
-            })}
-        </div>
-    )
-}
+//                     </div>
+//                 </div>)
+//             })}
+//         </div>
+//     )
+// }
 
 export default function RestaurantDetails(props) {
 

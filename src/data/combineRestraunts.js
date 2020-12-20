@@ -1,8 +1,17 @@
-import golpo, { menuHeaders } from './golpo'
+import golpo, { menuHeaders as golpoMenuHeader} from './golpo'
+import TMMenuItems, { TMMenuHeader } from './tm'
 
-const allResturants = [{
-    golpo,
-    menuHeaders
-}]
+const allResturants = [
+    {
+        nameIdentifier: "Golpo",
+        menuHeaders : golpoMenuHeader,
+        menus : golpo 
+    },
+    {
+        nameIdentifier: "TiaMaria",
+        menuHeaders : TMMenuHeader,
+        menus : TMMenuItems
+
+    }]
 
 export default allResturants

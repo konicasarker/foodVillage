@@ -1,28 +1,22 @@
+import { MenuItem } from '@material-ui/core';
 import React, {Component, useState } from 'react';
-import dishItems, { menuHeaders } from '../../../data/golpo'
+import DishItem from "./DishItem"
 import "./style.css"
 
 export default function  DishDetails (props) {
-    var data = dishItems.filter(item => props.value == 0 ? true :  props.value == item.dishId ).map(item => item.dishName)
-   // console.log("****** >>", data)
     return (
         <div>
-            {dishItems.filter(item =>  props.value == 0 ? true :  props.value == item.dishId ).map(item => {
+            {  props.dishItems.filter(item =>  props.value == 0 ? true :  props.value == item.dishId ).map(item => {
                 return (
                   <div className="dish-wrapper">
                     <div className="dish-group-title-container">
+                    <div className="header-img-container"> 
+                        <img src={item.dishHeaderImage} alt="dish-group-img"/> 
+                    </div>  
                     <div className="dish-group-title-text"> {item.dishName} </div>
-                    </div>
-                    {item.dishItems.map(menuitem => {
-                        return (
-                            <div className="dish-detail-wrapper">
-                                <div className="dish-detail">
-                                    <span className="dish-name">{menuitem.menuName}</span>
-                                    <div className="dish-additional-info"> {menuitem.details} </div>
-                                    <div className="price"> {menuitem.price} €</div>
-                                </div>  
-                            </div> 
-                        )
+                   </div>
+                    {item.dishItems.map(menuItem => {
+                        return <DishItem item={menuItem}/>
                     })}
   
                 </div>)

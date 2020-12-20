@@ -8,9 +8,10 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import dishItems, { menuHeaders } from '../data/golpo'
+//import dishItems, { menuHeaders } from '../data/golpo'
 import allResturantsDetails from '../data/combineRestraunts'
 import DishDetails from "./restaurant/Dish/DishDetails"
+import RestaurantDetailsHeader from "./RestaurantDetailsHeader"
 
 // const DishDetails2 = (props) => {
 //     var data = dishItems.filter(item => props.value == 0 ? true :  props.value == item.dishId ).map(item => item.dishName)
@@ -37,15 +38,17 @@ export default function RestaurantDetails(props) {
         setMenuTab(val)
     }
 
-    console.log('Index', menuTab)
+    //console.log('+++++++ ALL RESTAURANT DETAILS +++++++', allResturantsDetails)
+    const currRestaurantDetail = allResturantsDetails.find(item => item.nameIdentifier == props.match.params.name)
+    //console.log('+++++++ ALL RESTAURANT DETAILS +++++++', currRestaurantDetail)
+    
+    
+    if(currRestaurantDetail){
+        const {menuHeaders, menus} = currRestaurantDetail
+
     return (
         <div> 
-            <div>
-                <div> Restaurant name : {props.match.params.name} </div>
-                <div> Info and Favourite</div>
-                <div> Review-rating</div>
-                <div> Restaurant info</div>
-            </div>
+            <RestaurantDetailsHeader restaurantName={props.match.params.name}/>
             <AppBar position="static" color="default">
                 <Tabs
                 value={menuTab}
@@ -64,11 +67,13 @@ export default function RestaurantDetails(props) {
                     }
                 </Tabs>
             </AppBar>     
-            <DishDetails value={menuTab}/>
-               
-
+            <DishDetails value={menuTab} dishItems={menus} />             
         </div>
     )   
+    }else {
+            return <> NO DATA AVAILABLE FOR THIS RESTAURANT</>
+    }
+
 
 }
 

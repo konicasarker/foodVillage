@@ -1,22 +1,22 @@
-export const menuHeaders = [{ menu: "Popular dishes", id: 0},
-  { menu: "soup", id: 1},
-  { menu: "Vegetarian dishes", id: 2},
-  { menu: "Meat Items", id: 3},
-  { menu: "Fish items", id: 4},
-  { menu: "Cakes/Bakings", id: 5},
-  { menu: "sweet and snacks", id: 6},
-  { menu: "Drinks", id: 7}]
+export const TMMenuHeader = [{ menu: "Popular dishes", id: 0},
+  { menu: "Suppen", id: 1},
+  { menu: "Vorspeisen", id: 2},
+  { menu: "Salate", id: 3},
+  { menu: "Pizza", id: 4},
+  { menu: "Pasta", id: 5},
+  { menu: "Überbackene Pasta", id: 6},
+  { menu: "Gerichte vom Schwein", id: 7}]
 
-const menuItems  = [
+const TMMenuItems  = [
     {
     dishId : 1,
-    dishName: "soup",
-    dishHeaderImage: "img/golpo/1.png",
+    dishName: "Suppen",
+    dishHeaderImage: "",
     dishItems: [    
                 {
                     menuid : 1,
-                    menuName: "Lentil soup",
-                    details: "red lentil soup with coconut flakes",
+                    menuName: "soup#1",
+                    details: "",
                     price: "3"
                 },
                 {
@@ -41,8 +41,8 @@ const menuItems  = [
     },
     {
         dishId : 2,
-        dishName: "Vegetarian dishes",
-        dishHeaderImage: "img/golpo/2.png",
+        dishName: "Vorspeisen",
+        dishHeaderImage: "",
         dishItems: [
             {
                 menuid : 1,
@@ -72,8 +72,8 @@ const menuItems  = [
     },
     {
         dishId : 3,
-        dishName: "Meat Items",
-        dishHeaderImage: "img/golpo/3.png",
+        dishName: "Salate",
+        dishHeaderImage: "",
         dishItems: [
             {
                 menuid : 1,
@@ -91,8 +91,8 @@ const menuItems  = [
     },
     {
         dishId : 4,
-        dishName: "Fish items",
-        dishHeaderImage: "img/golpo/4.png",
+        dishName: "Pizza",
+        dishHeaderImage: "",
         dishItems: [
             {
                 menuid : 1,
@@ -110,8 +110,8 @@ const menuItems  = [
     },
     {
         dishId : 5,
-        dishName: "Cakes/Bakings",
-        dishHeaderImage: "img/golpo/5.png",
+        dishName: "Pasta",
+        dishHeaderImage: "",
         dishItems: [
             {
                 menuid : 1,
@@ -129,7 +129,26 @@ const menuItems  = [
     },
     {
         dishId : 6,
-        dishName: "Sweets&Snacks",
+        dishName: "Überbackene Pasta",
+        dishHeaderImage: "",
+        dishItems: [
+            {
+                menuid : 1,
+                menuName: "Rosgolla",
+                details: "With cheakpeas",
+                price: "6"
+            },
+            {
+                menuid : 2,
+                menuName: "Kalojam",
+                details: "With cheakpeas",
+                price: "6"
+            }
+        ],
+    },
+    {
+        dishId : 6,
+        dishName: "Gerichte vom Schwein",
         dishHeaderImage: "img/golpo/6.png",
         dishItems: [
             {
@@ -149,4 +168,4 @@ const menuItems  = [
 
 ]
 
-export default menuItems
+export default TMMenuItems

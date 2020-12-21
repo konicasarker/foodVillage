@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import "./style.css"
-import titleImage from '../../header2.jpeg'
+import titleImage from '../../logo.png'
 import logo2 from '../../logo-tr.png'
 
 

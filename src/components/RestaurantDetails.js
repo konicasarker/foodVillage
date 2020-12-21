@@ -45,32 +45,30 @@ export default function RestaurantDetails(props) {
     
     if(currRestaurantDetail){
         const {menuHeaders, menus} = currRestaurantDetail
-
-    return (
-        <div> 
-            <RestaurantDetailsHeader restaurantName={props.match.params.name}/>
-            <AppBar position="static" color="default">
-                <Tabs
-                value={menuTab}
-                onChange={handleMenu}
-                indicatorColor="primary"
-                textColor="primary"
-                variant="scrollable"
-                scrollButtons="auto"
-                aria-label="scrollable auto tabs example"
-                >
-                    {
-                        menuHeaders.map((item, index) =>{
-                            return <Tab key={index} label={item.menu} {...a11yProps(index)}/>
-                    })
-                    
-                    }
-                </Tabs>
-            </AppBar>     
-            <DishDetails value={menuTab} dishItems={menus} />             
-        </div>
-    )   
-    }else {
+        return (
+            <div> 
+                <RestaurantDetailsHeader restaurantName={props.match.params.name}/>
+                <AppBar position="static" color="default">
+                    <Tabs
+                    value={menuTab}
+                    onChange={handleMenu}
+                    indicatorColor="primary"
+                    textColor="primary"
+                    variant="scrollable"
+                    scrollButtons="auto"
+                    aria-label="scrollable auto tabs example"
+                    >
+                        {
+                            menuHeaders.map((item, index) =>{
+                                return <Tab key={index} label={item.menu} {...a11yProps(index)}/>
+                        })
+                        }
+                    </Tabs>
+                </AppBar>     
+                <DishDetails value={menuTab} dishItems={menus} />             
+            </div>
+        )   
+    } else {
             return <> NO DATA AVAILABLE FOR THIS RESTAURANT</>
     }
 

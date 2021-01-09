@@ -11,7 +11,8 @@ import reducer from './reducer/reducer'
 
 const initState = {
   restautantsList: [],
-  filterOptions: []
+  filterOptions: [],
+  restaurantDetails: []
 }
 
 const store = createStore(reducer, initState)

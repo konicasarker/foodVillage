@@ -3,14 +3,27 @@
     display: flex;
     flex-direction: row;
     padding: 15px;
-    margin-left: 10%;
+    margin-left: auto;
 }
 
 .grid-filter {
-    width: 25%;
-    border: 0px solid black;
+    display: none;
+    float: left;
 }
 
+@media only screen and (min-width: 1004px) {
+    .grid-filter {
+        display: block;
+        margin-bottom: 60px;
+        padding: 0 0 0 32px;
+        border: 0px solid black;
+        width: calc(35% - 25px);
+        float: left;
+        margin-left: 20px;
+        
+    }
+  }
+
 .grid-restaurantList {
-    width: 60%;
+    width: 100%;
 }

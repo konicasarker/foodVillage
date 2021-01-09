@@ -7,8 +7,13 @@ import GridContainer from './components/gridcontainer/GridContainer';
 import RestaurantDetails from './components/RestaurantDetails';
 import HeaderBar from './components/headerBar/HeaderBar'
 import Category from './components/FoodCategory/Category'
+
+
 import {restautantsList} from './data/restaurants'
 import {filterOptions} from './data/filter'
+import allResturantsDetails from './data/combineRestraunts'
+
+
 import { connect } from 'react-redux';
 
 class App extends React.Component {
@@ -19,6 +24,7 @@ class App extends React.Component {
   componentDidMount() {
     this.props.updateRestaurantList(restautantsList)
     this.props.updateFilters(filterOptions)
+    this.props.updateRestaurantDetails(allResturantsDetails)
   }
 
   render() {
@@ -30,6 +36,7 @@ class App extends React.Component {
         <Route exact path="/" component={GridContainer} />
         <Route path="/:name" component={RestaurantDetails}/>
       </Switch>
+      
     </React.Fragment>
     );
   }
@@ -38,7 +45,8 @@ class App extends React.Component {
  const mapDispatchToProps = dispatch => {
    return {
      updateRestaurantList : (val) => dispatch({type: 'ADD_RESTAURANTS', payload: val}),
-     updateFilters : (val) => dispatch({type: 'ADD_FILTERS', payload: val})
+     updateFilters : (val) => dispatch({type: 'ADD_FILTERS', payload: val}),
+     updateRestaurantDetails : (val) => dispatch({type: 'ADD_RESTAURANT_DETAILS', payload: val})
    }
  }
 

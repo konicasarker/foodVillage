@@ -56,7 +56,11 @@ export default function Restaurant(props) {
               </div>
               <div className="detailsWrapper"> 
                 <h2 className="restaurantName">{name}</h2>
-                <div className="kitchens"><span>Italian styles pizza, german, pasta</span></div>
+                <div className="kitchens">
+                      {category.map(function(item) {
+                        return <div key={item.id} className="item">{item}</div>;
+                      })}
+                    </div>
                 <div className="deliveryDetailsWrapper">
                   <div className="delivery">
                     <div className="delivery-time">{deliveryTime} min</div>

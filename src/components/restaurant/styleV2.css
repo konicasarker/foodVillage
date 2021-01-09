@@ -30,6 +30,13 @@ background-color: green;
     overflow: hidden;
 }
 
+@media only screen and (min-width: 1004px) {
+  .restaurant {
+    margin-right: 32px;
+  }
+}
+
+
 .logoWrapper{
     flex: 0 0 98px;
     text-align: center;
@@ -45,12 +52,15 @@ background-color: green;
   font-family: Takeaway Sans,Avant Garde,Century Gothic,Helvetica,Arial,sans-serif;
   font-weight: 600;
   padding: 0;
-  color: #0a3847;
+  color: rgb(17, 122, 17);
   font-size: 18px;
   line-height: 22px;
   max-height: 66px;
   overflow: hidden;
   margin: 0 8px 0 0;
+}
+@media only screen and (min-width: 600px) {
+  .restaurantName { color: #0a3847;}
 }
 
 .restaurant .detailsWrapper .kitchens {

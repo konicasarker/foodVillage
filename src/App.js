@@ -4,7 +4,7 @@ import './App.css';
 import React, { Component } from 'react';
 import {Switch, Route} from 'react-router-dom';
 import GridContainer from './components/gridcontainer/GridContainer';
-import RestaurantDetails from './components/RestaurantDetails';
+import RestaurantDetailContainer from './components/RestaurantDetailContainer';
 import HeaderBar from './components/headerBar/HeaderBar'
 import Category from './components/FoodCategory/Category'
 
@@ -34,7 +34,8 @@ class App extends React.Component {
       <Category />
       <Switch>
         <Route exact path="/" component={GridContainer} />
-        <Route path="/:name" component={RestaurantDetails}/>
+        <Route path="/:name" component={RestaurantDetailContainer}/>
+        {/* <Route path="/cart" component={Cart}/> */}
       </Switch>
       
     </React.Fragment>

@@ -1,3 +1,14 @@
 .nav-link  {
     text-decoration: none;
   }
+
+  .restaurantMainContainer{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .dishMaincontainer{
+    position: absolute;
+    width: 65%;
+    padding: 10px;
+  }

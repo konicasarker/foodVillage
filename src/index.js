@@ -12,7 +12,10 @@ import reducer from './reducer/reducer'
 const initState = {
   restautantsList: [],
   filterOptions: [],
-  restaurantDetails: []
+  restaurantDetails: [],
+  addedItems:[],
+  total: 0
+
 }
 
 const store = createStore(reducer, initState)

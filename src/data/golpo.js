@@ -37,7 +37,10 @@ const menuItems  = [
                     details: "made with fresh tomatoes and garnished with cream",
                     price: "3,5"
                 }
-            ]
+            ],
+    inCart: false,
+    count: 0,
+    total: 0
     },
     {
         dishId : 2,
@@ -68,7 +71,10 @@ const menuItems  = [
                 details: "With cheakpeas",
                 price: "6"
             }
-        ]
+        ],
+        inCart: false,
+        count: 0,
+        total: 0
     },
     {
         dishId : 3,
@@ -88,6 +94,9 @@ const menuItems  = [
                 price: "6"
             }
         ],
+        inCart: false,
+        count: 0,
+        total: 0
     },
     {
         dishId : 4,
@@ -107,6 +116,9 @@ const menuItems  = [
                 price: "6"
             }
         ],
+        inCart: false,
+        count: 0,
+        total: 0
     },
     {
         dishId : 5,
@@ -145,6 +157,9 @@ const menuItems  = [
                 price: "6"
             }
         ],
+    inCart: false,
+    count: 0,
+    total: 0
     },
 
 ]

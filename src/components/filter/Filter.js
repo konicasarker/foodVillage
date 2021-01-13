@@ -107,7 +107,7 @@ class Filters extends Component {
 
 const mapDispatchToProps = dispatch => ({
    updateList : (val) => { dispatch({
-      type: 'UPDATE_LIST',
+      type: 'EDIT_DISH_ITEM',
       payload: val
    })}
 })

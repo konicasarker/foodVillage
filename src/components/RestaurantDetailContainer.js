@@ -7,7 +7,7 @@ export default function  RestaurantDetailContainer (props) {
     return (
         <div className="restaurantMainContainer">
             <RestaurantDetails name = {props.match.params.name} />
-            <Cart/>
+            <Cart name = {props.match.params.name}/>
         </div>
     )
 }

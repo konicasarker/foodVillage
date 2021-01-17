@@ -15,21 +15,27 @@ class Cart extends Component {
         };
       }
 
+
     render() {
         let isEmptyCart = 0;
         if(this.props.addedItems){
             isEmptyCart = this.props.addedItems.length
         }
-        
+
+        const currRestaurantInfo = this.props.restautantsList.filter(item => item.nameIdentifier === this.props.name)
+           
         return (  
                 <div className="basketContainer"> 
                     <BasketButton />
                     <div className="basket-container-scroller"> 
                     
                     { isEmptyCart <= 0 ? <EmptyContent/> : null }
-                    { isEmptyCart > 0 ? <BasketItem items={this.props.addedItems}/> : null }
+                    { isEmptyCart > 0 ? <BasketItem items={this.props.addedItems}  removeFromCart={this.props.removeDishItemFromCart}/> : null }
 
-                    <CartAmount />
+                    <CartAmount 
+                        subTotal={this.props.total} 
+                        deliveryCost={currRestaurantInfo[0]?.deliveryCharge}
+                    />
                     <MinOrderMsg />
 
                     <button className="order_button"> 
@@ -43,7 +49,15 @@ class Cart extends Component {
 
 const mapStateToProps = state => ({
     addedItems: state.addedItems ? state.addedItems : [],
-    total: state.total ? state.total : []
+    total: state.total ? state.total : [],
+    restautantsList: state.restautantsList ? state.restautantsList : []
 })
 
-export default connect(mapStateToProps, null)(Cart)
+const mapDispatchToProps = dispatch => ({
+    removeDishItemFromCart : (dishId, menuId) => { dispatch({
+       type: 'DELETE_DISH_ITEM_FROM_CART',
+       payload: {dishId, menuId}
+    })}
+ })
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cart)

@@ -31,7 +31,9 @@ function RestaurantDetails(props) {
         props.updateDishItem(val);
     }
     
-
+   //we need current restaurant infor for header
+    const currRestaurantInfo = props.restautantsList.find(item => item.nameIdentifier === props.name)
+   
     const handleMenu = (e, val) => {
         setMenuTab(val)
     }
@@ -40,7 +42,7 @@ function RestaurantDetails(props) {
         const {menuHeaders, menus, nameIdentifier} = currRestaurantDetail
         return (
             <div className="dishMaincontainer"> 
-                <RestaurantDetailsHeader restaurantName={props.name}/>
+                <RestaurantDetailsHeader restaurantInfo={currRestaurantInfo}/>
                 <AppBar position="sticky" color="default">
                     <Tabs
                     value={menuTab}
@@ -76,7 +78,9 @@ function a11yProps(index) {
 
 const mapStateToProps = state => ({
     resturantsDishDetails: state.restaurantDetails ? state.restaurantDetails : [],
-    addedItems: state.addedItems ? state.addedItems : []
+    addedItems: state.addedItems ? state.addedItems : [],
+    restautantsList: state.restautantsList ? state.restautantsList : []
+
 })
 
 const mapDispatchToProps = dispatch => ({

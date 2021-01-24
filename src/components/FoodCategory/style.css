@@ -1,3 +1,57 @@
 .category{
-    border : 2px solid black;
+    display :flex;
+    height: 64px;
+    margin: 0 auto;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.kitchenTypeWrapper{
+    width: 100vw;
+    background-color: #f8f5f2; 
+    font-family: Takeaway Sans,Avant Garde,Century Gothic,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    color: #666;
+    font-size: 15px;
+    background-color: #fff;
+    line-height: 1.5;
+    text-align: left;
+    background-color: #f8f5f2;
+
+}
+
+.filter-kitchen.show_more {
+    margin-right: 0;
+    white-space: nowrap;
+    font-weight: 700;
+    color: #ff8000;
+}
+
+.component-container{
+    padding: 0 40px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.filter-kitchen{
+    display: flex;
+    margin: 16px 2px;
+    padding: 0;
+    height: 32px;
+    width: auto;
+    align-items: center;
+    text-align: center;
+
+}
+.filter-kitchen:hover{
+    background-color: #ff8000;
+    border-radius: 16px;
+    color: #fff;
+    font-weight: 400;
+    text-shadow: 0.5px 0 0 #ff8000; 
+}
+
+
+.kitchen{
+    padding: 0 12px;
 }

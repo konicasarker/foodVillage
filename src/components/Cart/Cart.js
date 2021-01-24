@@ -5,6 +5,7 @@ import MinOrderMsg from './MinOrderMsg';
 import BasketButton from './BasketButton';
 import BasketItem from './BasketItem';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 import "./style.css"
 
 class Cart extends Component {
@@ -15,15 +16,19 @@ class Cart extends Component {
         };
       }
 
-
+   
     render() {
         let isEmptyCart = 0;
         if(this.props.addedItems){
             isEmptyCart = this.props.addedItems.length
         }
 
+        const ConditionalLink = ({ children, to, condition }) => (!!condition && to)
+        ? <Link to={to}>{children}</Link>
+        : <>{children}</>;
+          
         const currRestaurantInfo = this.props.restautantsList.filter(item => item.nameIdentifier === this.props.name)
-           
+        
         return (  
                 <div className="basketContainer"> 
                     <BasketButton />
@@ -37,10 +42,13 @@ class Cart extends Component {
                         deliveryCost={currRestaurantInfo[0]?.deliveryCharge}
                     />
                     <MinOrderMsg />
+                     
+                     <ConditionalLink to="/cart" condition={this.props.total > 10}>
+                        <button className={this.props.total <= 10 ? 'order_button' : 'order_button enabled'} > 
+                                Order 
+                        </button>                     
+                     </ConditionalLink>
 
-                    <button className="order_button"> 
-                        Order 
-                    </button>
                     </div>
                 </div>   
         )

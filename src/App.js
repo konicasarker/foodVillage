@@ -3,10 +3,10 @@ import './App.css';
 
 import React, { Component } from 'react';
 import {Switch, Route} from 'react-router-dom';
-import GridContainer from './components/gridcontainer/GridContainer';
+import MainRestaurantContainer from './components/gridcontainer/MainRestaurantContainer';
 import RestaurantDetailContainer from './components/RestaurantDetailContainer';
 import HeaderBar from './components/headerBar/HeaderBar'
-import Category from './components/FoodCategory/Category'
+import MyCart from './components/Cart/MyCartDetail'
 
 
 import {restautantsList} from './data/restaurants'
@@ -31,11 +31,10 @@ class App extends React.Component {
     return (
     <React.Fragment>
       <HeaderBar />
-      <Category />
       <Switch>
-        <Route exact path="/" component={GridContainer} />
+        <Route exact path="/" component={MainRestaurantContainer} />
+        <Route exact path="/myCart" component={MyCart} />
         <Route path="/:name" component={RestaurantDetailContainer}/>
-        {/* <Route path="/cart" component={Cart}/> */}
       </Switch>
       
     </React.Fragment>

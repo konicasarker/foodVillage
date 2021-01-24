@@ -5,8 +5,9 @@
   background-color: transparent;
   z-index: 16;
   box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
-  width: 344px;
+  display: none;
 }
+
 @media only screen and (min-width: 1004px) {
   .basketContainer {
     position: fixed;
@@ -14,7 +15,8 @@
     background-color: transparent;
     z-index: 16;
     box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
-    width: 344px;
+    width: 310px;
+    width: 324px;
     display: flex;
     flex-direction: column;
     height: 100%;;
@@ -32,6 +34,16 @@
   width: 100%;
 }
 
+.order_button.enabled{
+  color: #fff;
+  background-color: #1574f5;
+  text-decoration: none;;
+}
+
+a {
+  text-decoration: none;
+}
+
 @media only screen and (min-width: 1004px) {
   .order_button {
     font-family: Takeaway Sans,Avant Garde,Century Gothic,Helvetica,Arial,sans-serif;
@@ -40,14 +52,17 @@
     text-align: center;
     user-select: none;
     font-size: 18px;
-      border-radius: 2px;
-      border: 0;
-      position: relative;
-      height: 64px;
-      line-height: 64px;
-      width: calc(100% - 24px);
-      margin: 0 auto;
-      display: block;
+    border-radius: 2px;
+    border: 0;
+    position: relative;
+    height: 64px;
+    line-height: 64px;
+    width: calc(100% - 24px);
+    margin: 0 auto;
+    display: block;
+    pointer-events: none;
+    text-decoration: none;
+
   }
 }
 

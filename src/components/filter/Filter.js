@@ -73,18 +73,12 @@ class Filters extends Component {
         const filterOptions = this.props.filterOptions
         return(
            <div>
-             <div>
-                Title
-                <div> Title</div>  
-                <div> Title</div>  
-             </div> 
-             <nav> navigation
-               <div> </div>
-               <div>
-                  <button> Button 1</button> 
-                  <button> Button 1</button> 
-               </div>
-             </nav>     
+              <div className="restaurantcount">
+                10 Restaurants
+             </div>
+             <div className="titleBlock">
+               <p> Explore the taste of Food !!!</p>
+             </div>     
             <div>
                   { 
                      filterOptions.map((item, index)=>{

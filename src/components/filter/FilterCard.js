@@ -24,7 +24,7 @@ export default class FilterCard extends Component {
                       }
                     
                        return (
-                             <div className="container" key={index}>
+                             <div key={index} className="container" key={index}>
                                 <input 
                                     type="radio" 
                                     name={name}

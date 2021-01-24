@@ -64,24 +64,13 @@ export default function Restaurant(props) {
                   </Typography>
                   <Typography variant="display2" color="textSecondary">
                     <div>
-                      {category.map(function(item) {
-                        return <div key={item.id} className="item">{item}</div>;
+                      {category.map(function(item, index) {
+                        return <div key={index} className="item">{item}</div>;
                       })}
                     </div>
                   </Typography>
                 </CardContent>
 
-                <div className={classes.controls}>
-                  {/* <IconButton aria-label="previous">
-                    {theme.direction === 'rtl' ? <SkipNextIcon /> : <SkipPreviousIcon />}
-                  </IconButton>
-                  <IconButton aria-label="play/pause">
-                    <PlayArrowIcon className={classes.playIcon} />
-                  </IconButton>
-                  <IconButton aria-label="next">
-                    {theme.direction === 'rtl' ? <SkipPreviousIcon /> : <SkipNextIcon />}
-                  </IconButton> */}
-                </div>
               </div>
 
             </Card>

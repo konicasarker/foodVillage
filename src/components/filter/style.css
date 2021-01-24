@@ -26,6 +26,19 @@
   }
 
 
+.restaurantcount{
+  line-height: 24px;
+  letter-spacing: 0;
+  font-family: Takeaway Sans,Avant Garde,Century Gothic,Helvetica,Arial,sans-serif;
+    font-weight: 600;
+    color: #0a3847
+}
 
-  
+.titleBlock{
+  line-height: 24px;
+  letter-spacing: 0;
+  font-family: Takeaway Sans,Avant Garde,Century Gothic,Helvetica,Arial,sans-serif;
+  font-weight: 600;
+  color: #f78e2c
+}
 

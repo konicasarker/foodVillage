@@ -21,9 +21,9 @@ export default class HeaderBar extends Component {
                 <div className="topbar-location">  Berlin-Mitte, 10178 Berlin </div> 
                 <div className="topbar-menu">  ---  </div> 
                 </div>
-                <div className="header-image-container">
+                {/* <div className="header-image-container">
                     <img src={titleImage} alt="Nature" className="responsive"></img>
-                </div>
+                </div> */}
           </div>
         )
         

@@ -57,8 +57,8 @@ export default function Restaurant(props) {
               <div className="detailsWrapper"> 
                 <h2 className="restaurantName">{name}</h2>
                 <div className="kitchens">
-                      {category.map(function(item) {
-                        return <div key={item.id} className="item">{item}</div>;
+                      {category.map(function(item, index) {
+                        return <div key={index} className="item">{item}</div>;
                       })}
                     </div>
                 <div className="deliveryDetailsWrapper">
